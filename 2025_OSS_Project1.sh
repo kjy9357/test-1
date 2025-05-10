@@ -28,7 +28,6 @@ do
 			read -p "Enter a player name to search: " name
 			echo
 			echo "Player stats for \"$name\":"
-			#cat "$file" | awk -F, -v name="$name" '$2==name {print "Player: "$2", Team: "$4", Age: "$3}'
 			cat "$file" | awk -F',' -v name="$name" '$2==name {print "Player: "$2 ", Team: "$4", Age: "$3",WAR: "$6", HR: "$14", BA: "$20}'
 			;;
 		2)
